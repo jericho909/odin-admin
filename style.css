@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+#sidebar {
+    grid-column: 1;
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+    background-color: lightblue;
+}
+
+#main {
+    grid-column: 2 / 3;
+    display: grid;
+    grid-template-rows: 1fr 5fr;
+}
+
+#header {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    background-color: antiquewhite;
+}
+
+#upperHeader {
+    display: flex;
+}
+
+#lowerHeader {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+}
+
+#content {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    background-color: aquamarine;
+}
+
+#projectCards{
+    grid-area: 1 / 1 / 3 / 2;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+#announcementCards {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+#trendingTab {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+#logo {
+    grid-row: 1;
+}
+
+#menu {
+    grid-row: 2;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+#upperMenu {
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 1fr);
+}
+
+#lowerMenu {
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 1fr);
+}
