@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+:root {
+    font-family: 'Open Sans', sans-serif;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -5,11 +11,39 @@ body {
     grid-template-columns: 1fr 4fr;
 }
 
+
+
 #sidebar {
     grid-column: 1;
     display: grid;
-    grid-template-rows: 1fr 3fr;
-    background-color: lightblue;
+    grid-template-rows: 1fr 4fr;
+    background-color: #06b6d4;
+}
+
+#sidebar > button {
+    border: none;
+}
+
+.logos {
+    filter: invert(97%) sepia(8%) saturate(771%) hue-rotate(198deg) brightness(119%) contrast(100%);
+}
+#upperMenu > div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 4px;
+}
+
+#lowerMenu > div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 4px;
+}
+
+.sidebarLinks > a {
+    text-decoration: none;
+    color: white;
 }
 
 #main {
@@ -21,7 +55,7 @@ body {
 #header {
     display: grid;
     grid-template-rows: 1fr 1fr;
-    background-color: antiquewhite;
+    background-color: #ecfeff;
 }
 
 #upperHeader {
@@ -38,7 +72,7 @@ body {
     display: grid;
     grid-template-columns: 4fr 1fr;
     grid-template-rows: 1fr 1fr;
-    background-color: aquamarine;
+    background-color: #a5f3fc;
 }
 
 #projectCards{
@@ -57,6 +91,18 @@ body {
 
 #logo {
     grid-row: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px;
+    color: white;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+#logo > img {
+    position: relative;
+    right: 10px;
 }
 
 #menu {
@@ -69,10 +115,11 @@ body {
     grid-row: 1;
     display: grid;
     grid-template-columns: repeat(auto-fit, 1fr);
+    margin-bottom: 40px;
 }
 
 #lowerMenu {
     grid-row: 2;
     display: grid;
-    grid-template-columns: repeat(auto-fit, 1fr);
+    grid-template-rows: 48px 48px 48px;
 }
