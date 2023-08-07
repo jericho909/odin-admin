@@ -60,6 +60,16 @@ body {
 
 #upperHeader {
     display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profilePic {
+    border-radius: 50%;
+}
+
+.searchBar {
+    flex: 1;
 }
 
 #lowerHeader {
