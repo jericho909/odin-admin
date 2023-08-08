@@ -8,15 +8,13 @@ body {
     margin: 0;
     padding: 0;
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 0.75fr 4fr;
 }
-
-
 
 #sidebar {
     grid-column: 1;
     display: grid;
-    grid-template-rows: 1fr 4fr;
+    grid-template-rows: repeat(2, 250px);
     background-color: #06b6d4;
 }
 
@@ -49,12 +47,13 @@ body {
 #main {
     grid-column: 2 / 3;
     display: grid;
-    grid-template-rows: 1fr 5fr;
+    grid-template-rows: 0.8fr 5fr;
+    background-color: #a5f3fc;
 }
 
 #header {
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 75px 75px;
     background-color: #ecfeff;
 }
 
@@ -62,6 +61,8 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
+    height: 100px;
+    margin: 0;
 }
 
 .profilePic {
@@ -74,8 +75,19 @@ body {
 
 #lowerHeader {
     display: flex;
-    justify-content: space-between;
     padding: 12px;
+    height: 100px;
+    margin: 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lowerHeaderButtons {
+    background-color: #5cd2d8;
+    border-radius: 8px;
+    height: 40px;
+    width: 100px;
+    color: black;
 }
 
 #content {
@@ -83,12 +95,16 @@ body {
     grid-template-columns: 4fr 1fr;
     grid-template-rows: 1fr 1fr;
     background-color: #a5f3fc;
+    gap: 25px;
 }
 
 #projectCards{
     grid-area: 1 / 1 / 3 / 2;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-rows: repeat(auto-fit, 350px);
+    gap: 12px;
+    padding: 8px;
 }
 
 #announcementCards {
@@ -102,12 +118,13 @@ body {
 #logo {
     grid-row: 1;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    padding: 6px;
+    padding: 20px;
     color: white;
     font-weight: bolder;
-    font-size: 20px;
+    font-size: 32px;
+
 }
 
 #logo > img {
@@ -124,7 +141,7 @@ body {
 #upperMenu {
     grid-row: 1;
     display: grid;
-    grid-template-columns: repeat(auto-fit, 1fr);
+    grid-template-rows: repeat(auto-fit,50px);
     margin-bottom: 40px;
 }
 
@@ -133,3 +150,50 @@ body {
     display: grid;
     grid-template-rows: 48px 48px 48px;
 }
+
+#announcementCards {
+    background-color: rgba(211, 242, 243, 0.75);
+    padding: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+
+}
+.card {
+    background-color: #FFFFFF;
+    color: black;
+    text-align: center;
+    padding: 6px;
+  }
+
+  #projectCards p {
+    color: black;
+    font-weight: normal;
+    font-size: 14px;
+  }
+
+  .card .title {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  #trendingTab {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    height: 450px;
+    justify-items: left;
+    background-color: rgba(211, 242, 243, 0.75);
+    padding: 6px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+  }
+
+  .trendingProfile {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .trendingProfile > img {
+    border-radius: 50%;
+  }
